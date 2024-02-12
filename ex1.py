@@ -19,6 +19,7 @@ def merge(arr, low, mid, high):
 
 
 def merge_sort(arr, low, high):
+    print(arr[low:high + 1])
     if low < high:
         mid = (low + high) // 2
         merge_sort(arr, low, mid)
@@ -29,5 +30,5 @@ def merge_sort(arr, low, high):
     return arr
 
 
-arr = [5, 3, 2, 8, 1]
+arr = [8, 42, 25, 3, 3, 2, 27, 3]
 print(merge_sort(arr, 0, len(arr) - 1))
