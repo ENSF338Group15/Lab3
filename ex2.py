@@ -35,8 +35,8 @@ for case in ["best", "worst", "average"]:
         elif case == "average":
             arr = random.sample(range(size), size)
         
-        bubble_time = timeit.timeit(stmt='bubble_sort(arr[:])', globals=globals(), number=100)
-        quick_time = timeit.timeit(stmt='quick_sort(arr[:])', globals=globals(), number=100)
+        bubble_time = timeit.timeit(stmt='bubble_sort(arr[:])', globals=globals(), number=1)
+        quick_time = timeit.timeit(stmt='quick_sort(arr[:])', globals=globals(), number=1)
 
         bubble_times.append(bubble_time)
         quick_times.append(quick_time)
