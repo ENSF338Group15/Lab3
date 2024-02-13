@@ -23,16 +23,16 @@ def quick_sort(arr):
 
 array_size = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]
 
-for scenario in ["best", "worst", "average"]:
+for case in ["best", "worst", "average"]:
     bubble_times = []
     quick_times = []
 
     for size in array_size:
-        if scenario == "best":
+        if case == "best":
             arr = list(range(size))
-        elif scenario == "worst":
+        elif case == "worst":
             arr = list(range(size, 0, -1))
-        elif scenario == "average":
+        elif case == "average":
             arr = random.sample(range(size), size)
         
         bubble_time = timeit.timeit(stmt='bubble_sort(arr[:])', globals=globals(), number=100)
@@ -56,6 +56,6 @@ for scenario in ["best", "worst", "average"]:
 
     plt.xlabel('Array Size')
     plt.ylabel('Time (s)')
-    plt.title(f'Bubble Sort vs Quick Sort ({scenario} scenario)')
+    plt.title(f'Bubble Sort vs Quick Sort ({case} case)')
     plt.legend()
     plt.show()
